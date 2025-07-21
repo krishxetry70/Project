@@ -2,6 +2,14 @@ const imgBox = document.getElementById("imgbox");
 const qrImg = document.getElementById("qrImg");
 const qrText = document.getElementById("qrText");
 const generateButton = document.getElementById("generate-button");
+const container = document.querySelector(".container");
+
+
+  container.addEventListener('keypress',(st) => {
+ if( st.key === "Enter"){
+  generateQr();
+ }
+});
 
 function generateQr(){
   if(qrText.value.trim().length > 0){
